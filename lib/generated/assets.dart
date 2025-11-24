@@ -7,4 +7,6 @@ class Assets {
   static const String google = 'images/google.png';
   static const String apple = 'images/apple.png';
   static const String dLogo = 'images/d_logo.png';
+  static const String aiIcon = 'images/ai_icon.png';
+  static const String aiGroup = 'images/ai_group.png';
 }

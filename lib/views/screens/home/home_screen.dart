@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:craveai/controllers/app_colors.dart';
 import 'package:craveai/generated/assets.dart';
 import 'package:craveai/views/widgets/common_image_view.dart';
+import 'package:craveai/views/widgets/my_button.dart';
 import 'package:craveai/views/widgets/my_text.dart';
 import 'package:flutter/material.dart';
 
@@ -37,10 +38,10 @@ class _HomeScreenState extends State<HomeScreen> {
                             height: 30,
                             width: 30,
                             decoration: BoxDecoration(
-                              color: AppColors.primary.withOpacity(0.2),
+                              color: AppColors.primary.withValues(alpha: 0.2),
                               shape: BoxShape.circle,
                               border: Border.all(
-                                color: Colors.white.withOpacity(0.2),
+                                color: Colors.white.withValues(alpha: 0.2),
                                 width: 1.2,
                               ),
                             ),
@@ -66,10 +67,10 @@ class _HomeScreenState extends State<HomeScreen> {
                             height: 30,
                             width: 30,
                             decoration: BoxDecoration(
-                              color: AppColors.primary.withOpacity(0.2),
+                              color: AppColors.primary.withValues(alpha: 0.2),
                               shape: BoxShape.circle,
                               border: Border.all(
-                                color: Colors.white.withOpacity(0.2),
+                                color: Colors.white.withValues(alpha: 0.2),
                                 width: 1.2,
                               ),
                             ),
@@ -95,10 +96,10 @@ class _HomeScreenState extends State<HomeScreen> {
                             height: 30,
                             width: 30,
                             decoration: BoxDecoration(
-                              color: AppColors.primary.withOpacity(0.2),
+                              color: AppColors.primary.withValues(alpha: 0.2),
                               shape: BoxShape.circle,
                               border: Border.all(
-                                color: Colors.white.withOpacity(0.2),
+                                color: Colors.white.withValues(alpha: 0.2),
                                 width: 1.2,
                               ),
                             ),
@@ -115,6 +116,93 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 ],
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  color: AppColors.primary.withValues(alpha: 0.2),
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    left: 8.0,
+                    right: 8.0,
+                    top: 16,
+                    bottom: 16,
+                  ),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                MyText(
+                                  text: "Meet Your",
+                                  size: 13,
+                                  weight: FontWeight.w600,
+                                ),
+                                MyText(
+                                  text: " Perfect AI",
+                                  size: 13,
+                                  weight: FontWeight.w600,
+                                  color: AppColors.secondary,
+                                ),
+                              ],
+                            ),
+                            MyText(
+                              text: "Companion",
+                              size: 13,
+                              weight: FontWeight.w600,
+                            ),
+                            const SizedBox(height: 10),
+
+                            MyText(
+                              text:
+                                  "Choose from fully unlocked, personality-rich models tailored for you",
+                              size: 10,
+                              weight: FontWeight.w600,
+                            ),
+                            const SizedBox(height: 10),
+
+                            Container(
+                              height: 30,
+                              width: 140,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(6),
+                                color: AppColors.secondary,
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Row(
+                                  children: [
+                                    CommonImageView(
+                                      imagePath: Assets.aiIcon,
+                                      height: 20,
+                                    ),
+                                    const SizedBox(width: 6),
+                                    MyText(
+                                      text: "Create AI Girlfriend",
+                                      size: 10,
+                                      weight: FontWeight.w600,
+                                      color: AppColors.primary,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Expanded(
+                        child: CommonImageView(
+                          imagePath: Assets.aiGroup,
+                          height: 30,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ],
           ),
