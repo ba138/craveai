@@ -137,8 +137,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     begin: Alignment.centerLeft,
                     end: Alignment.centerRight,
                     colors: [
-                      AppColors.primary,
-                      Color(0xFFD01005).withValues(alpha: 0.06), // red
+                      AppColors.primary.withValues(alpha: 0.7), // green
+                      Color(0xFFD01005).withValues(alpha: 0.08), // red
                     ],
                   ),
                 ),
