@@ -1,6 +1,7 @@
 import 'package:craveai/controllers/app_colors.dart';
 import 'package:craveai/generated/assets.dart';
 import 'package:craveai/views/screens/auth_screens/forget_passord_screen.dart';
+import 'package:craveai/views/screens/dashboard/dashboard_screen.dart';
 import 'package:craveai/views/widgets/common_image_view.dart';
 import 'package:craveai/views/widgets/my_button.dart';
 import 'package:craveai/views/widgets/my_text.dart';
@@ -95,7 +96,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                 right: 16.0,
                               ),
                               child: MyButton(
-                                onTap: () {},
+                                onTap: () {
+                                  Get.offAll(() => CustomBottomNav());
+                                },
                                 buttonText: "Login",
                                 radius: 12,
                               ),
