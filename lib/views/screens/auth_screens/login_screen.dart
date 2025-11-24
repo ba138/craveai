@@ -206,6 +206,15 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ],
               ),
+              const SizedBox(height: 30),
+              Row(
+                spacing: 20,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  MyText(text: "Terms of use", color: AppColors.secondary),
+                  MyText(text: "Privacy Policy", color: AppColors.secondary),
+                ],
+              ),
             ],
           ),
         ),

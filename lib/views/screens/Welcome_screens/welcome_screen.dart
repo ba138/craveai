@@ -1,5 +1,6 @@
 import 'package:craveai/controllers/app_colors.dart';
 import 'package:craveai/generated/assets.dart';
+import 'package:craveai/views/screens/auth_screens/create_account_screen.dart';
 import 'package:craveai/views/screens/auth_screens/login_screen.dart';
 import 'package:craveai/views/widgets/common_image_view.dart';
 import 'package:craveai/views/widgets/my_button.dart';
@@ -50,7 +51,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 top: 20,
               ),
               child: MyButton(
-                onTap: () {},
+                onTap: () {
+                  Get.to(() => const CreateAccountScreen());
+                },
                 buttonText: "Create an account",
                 radius: 12,
               ),
