@@ -120,6 +120,8 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               const SizedBox(height: 30),
               Row(
+                spacing: 20,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
                     width: 64,
@@ -140,9 +142,63 @@ class _LoginScreenState extends State<LoginScreen> {
                         child: Container(
                           alignment: Alignment.center,
                           color: Colors.white.withValues(alpha: 0.1),
-                          child: Icon(
-                            Icons.star,
-                            color: Colors.white.withValues(alpha: 0.8),
+                          child: CommonImageView(
+                            imagePath: Assets.fb,
+                            height: 30,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 64,
+                    height: 64,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      border: Border.all(
+                        color: const Color(
+                          0xFFE8E6EA,
+                        ).withValues(alpha: 0.4), // stroke color
+                        width: 1.2,
+                      ),
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(16),
+                      child: BackdropFilter(
+                        filter: ImageFilter.blur(sigmaX: 0, sigmaY: 0),
+                        child: Container(
+                          alignment: Alignment.center,
+                          color: Colors.white.withValues(alpha: 0.1),
+                          child: CommonImageView(
+                            imagePath: Assets.google,
+                            height: 30,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 64,
+                    height: 64,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      border: Border.all(
+                        color: const Color(
+                          0xFFE8E6EA,
+                        ).withValues(alpha: 0.4), // stroke color
+                        width: 1.2,
+                      ),
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(16),
+                      child: BackdropFilter(
+                        filter: ImageFilter.blur(sigmaX: 0, sigmaY: 0),
+                        child: Container(
+                          alignment: Alignment.center,
+                          color: Colors.white.withValues(alpha: 0.1),
+                          child: CommonImageView(
+                            imagePath: Assets.apple,
+                            height: 30,
                           ),
                         ),
                       ),
