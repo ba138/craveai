@@ -2,9 +2,11 @@ import 'dart:ui';
 
 import 'package:craveai/controllers/app_colors.dart';
 import 'package:craveai/generated/assets.dart';
+import 'package:craveai/views/screens/home/unlock_register_screen.dart';
 import 'package:craveai/views/widgets/my_button.dart';
 import 'package:craveai/views/widgets/my_text.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class UnlockScreen extends StatelessWidget {
   const UnlockScreen({super.key});
@@ -133,7 +135,9 @@ class UnlockScreen extends StatelessWidget {
                             top: 12,
                           ),
                           child: MyButton(
-                            onTap: () {},
+                            onTap: () {
+                              Get.to(() => UnlockRegisterScreen());
+                            },
                             buttonText: " REGISTER NOW ",
                             radius: 12,
                           ),
