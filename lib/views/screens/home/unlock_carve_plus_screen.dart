@@ -1,5 +1,6 @@
 import 'package:craveai/controllers/app_colors.dart';
 import 'package:craveai/generated/assets.dart';
+import 'package:craveai/views/screens/Subscription_Screens/manage_subscription_screen.dart';
 import 'package:craveai/views/widgets/common_image_view.dart';
 import 'package:craveai/views/widgets/my_text.dart';
 import 'package:flutter/material.dart';
@@ -94,6 +95,9 @@ class UnlockCarvePlusScreen extends StatelessWidget {
                   size: 12,
                   color: AppColors.secondary,
                   textAlign: TextAlign.center,
+                  onTap: () {
+                    Get.to(() => ManageSubscriptionScreen());
+                  },
                 ),
                 const SizedBox(height: 20),
                 Row(

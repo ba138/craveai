@@ -265,7 +265,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     top: 20.0,
                   ),
                   child: MyButton(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(() => DetailScreen());
+                    },
                     buttonText: "Chat Now",
                     radius: 16,
                   ),
@@ -315,14 +317,38 @@ class _HomeScreenState extends State<HomeScreen> {
                   childAspectRatio: 0.9,
                   shrinkWrap: true,
                   physics: NeverScrollableScrollPhysics(),
-                  children: const [
-                    HomeCard(image: Assets.maya, title: "Flirty", age: "25"),
-                    HomeCard(image: Assets.maya, title: "Romantic", age: "30"),
-                    HomeCard(image: Assets.maya, title: "Chill", age: "22"),
+                  children: [
+                    HomeCard(
+                      image: Assets.maya,
+                      title: "Flirty",
+                      age: "25",
+                      ontap: () {
+                        Get.to(() => DetailScreen());
+                      },
+                    ),
+                    HomeCard(
+                      image: Assets.maya,
+                      title: "Romantic",
+                      age: "30",
+                      ontap: () {
+                        Get.to(() => DetailScreen());
+                      },
+                    ),
+                    HomeCard(
+                      image: Assets.maya,
+                      title: "Chill",
+                      age: "22",
+                      ontap: () {
+                        Get.to(() => DetailScreen());
+                      },
+                    ),
                     HomeCard(
                       image: Assets.maya,
                       title: "Adventurous",
                       age: "28",
+                      ontap: () {
+                        Get.to(() => DetailScreen());
+                      },
                     ),
                   ],
                 ),

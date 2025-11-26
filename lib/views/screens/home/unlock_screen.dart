@@ -147,6 +147,9 @@ class UnlockScreen extends StatelessWidget {
                           text: "Maybe later",
                           size: 16,
                           color: Colors.grey,
+                          onTap: () {
+                            Get.back();
+                          },
                         ),
                         const SizedBox(height: 20),
                       ],

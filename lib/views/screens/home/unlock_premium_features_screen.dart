@@ -83,9 +83,7 @@ class UnlockPremiumFeaturesScreen extends StatelessWidget {
                                   right: 16.0,
                                 ),
                                 child: InkWell(
-                                  onTap: () {
-                                    Get.to(() => UnlockCarvePlusScreen());
-                                  },
+                                  onTap: () {},
                                   child: Container(
                                     height: 80,
                                     width: double.infinity,
@@ -215,7 +213,9 @@ class UnlockPremiumFeaturesScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),
                   child: MyButton(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(() => UnlockCarvePlusScreen());
+                    },
                     buttonText: "Activate Crave+ Premium",
                     radius: 12,
                   ),
