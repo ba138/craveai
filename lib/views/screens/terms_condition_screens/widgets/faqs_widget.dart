@@ -48,7 +48,7 @@ class FAQItem extends StatelessWidget {
 
         const SizedBox(height: 20),
 
-        Divider(color: Colors.white.withOpacity(0.2), thickness: 1),
+        Divider(color: Colors.white.withValues(alpha: 0.2), thickness: 1),
 
         const SizedBox(height: 20),
       ],
