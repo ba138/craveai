@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:craveai/generated/app_colors.dart';
 import 'package:craveai/generated/assets.dart';
 import 'package:craveai/views/screens/categories_screens/more_categories_screen.dart';
+import 'package:craveai/views/screens/chat_screens/inbox_screen.dart';
 import 'package:craveai/views/screens/create_ai_gf_screens/create_ai_gf_screen.dart';
 import 'package:craveai/views/screens/home/detail_screen.dart';
 import 'package:craveai/views/widgets/categories_card.dart';
@@ -49,26 +50,33 @@ class _HomeScreenState extends State<HomeScreen> {
                     Row(
                       children: [
                         // Chat icon
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(15),
-                          child: BackdropFilter(
-                            filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
-                            child: Container(
-                              height: 30,
-                              width: 30,
-                              decoration: BoxDecoration(
-                                color: AppColors.primary.withValues(alpha: 0.2),
-                                shape: BoxShape.circle,
-                                border: Border.all(
-                                  color: Colors.white.withValues(alpha: 0.2),
-                                  width: 1.2,
+                        InkWell(
+                          onTap: () {
+                            Get.to(() => InboxScreen());
+                          },
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(15),
+                            child: BackdropFilter(
+                              filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
+                              child: Container(
+                                height: 30,
+                                width: 30,
+                                decoration: BoxDecoration(
+                                  color: AppColors.primary.withValues(
+                                    alpha: 0.2,
+                                  ),
+                                  shape: BoxShape.circle,
+                                  border: Border.all(
+                                    color: Colors.white.withValues(alpha: 0.2),
+                                    width: 1.2,
+                                  ),
                                 ),
-                              ),
-                              child: const Center(
-                                child: Icon(
-                                  Icons.chat,
-                                  size: 16,
-                                  color: AppColors.secondary,
+                                child: const Center(
+                                  child: Icon(
+                                    Icons.chat,
+                                    size: 16,
+                                    color: AppColors.secondary,
+                                  ),
                                 ),
                               ),
                             ),
